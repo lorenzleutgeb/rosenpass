@@ -157,11 +157,6 @@
                     '';
                   };
 
-                  # liboqs requires quite a lot of stack memory, thus we adjust
-                  # the default stack size picked for new threads (which is used
-                  # by `cargo test`) to be _big enough_
-                  RUST_MIN_STACK = 8 * 1024 * 1024; # 8 MiB
-
                   # We want to build for a specific target...
                   CARGO_BUILD_TARGET = target;
 
